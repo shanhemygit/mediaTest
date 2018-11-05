@@ -1,0 +1,450 @@
+body,ul,li,p,a{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+:root,body{
+    overflow: hidden;
+}
+/*
+   背景 
+ */
+.wrapper{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; */
+    width: 100%;
+    height: 700px;
+    background-image: url("../images/ogMs_bg.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+.wrap{
+    position: relative;
+    min-width: 768px;
+    width: 60%;
+    margin: 10px auto;
+    margin-top: 0;
+}
+/* 
+   使用flex 做整体布局
+*/
+.mob-divc-search{
+    display: none;
+    font-size: 0;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* width: 60%; */
+    min-width: 200px;
+    height: 24px;
+    z-index: 999;
+    background-color: #fff;
+    transition: top 0.3s linear;
+}
+.mob-divc-search.search-close{
+    top: -24px;
+}
+.mob-divc-search-inpu{
+    width: 100%;
+    height: 24px;
+}
+.mob-divc-search-inpu input{
+    float: left;
+    outline: transparent;
+    border-width: 0;
+    width: 140px;
+    height: 24px;
+    font-size: 16px;
+}
+.mob-divc-search-icon.glyphicon{
+    top: 0;
+}
+.mob-divc-search-icon{
+    float: left;
+    width: 26px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #fff;
+    /* opacity: 0.6; */
+}
+.btn-toggle{
+    border: none;
+    outline: none;
+    background-color: rgb(47, 122, 168);
+    height: 24px;
+    width: 34px;
+    text-align: center;
+    line-height: 24px;
+    padding: 0;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+}
+.search-show{
+    width: 24px;
+    height: 24px;
+    display: none;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    font-size: 16px;
+}
+/* 
+  内容分块
+*/
+.head-wrap{
+    height: 70px;
+}
+.container-fluid,.row,.left-log,.log-wrap,img,.search-wrap{
+    height: 100%;
+}
+.search-wrap{
+    position: relative;
+}
+
+/* 
+  顶部log部分
+*/
+.log-wrap img{
+    height: 100%;
+    width: 272px;
+}
+/* 
+  搜索框部分
+*/
+.input-grp{
+    float: right;
+    width: 60%;
+    min-width: 200px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid transparent;
+    overflow: hidden;
+    
+}
+.input-grp span{
+    position: relative;
+    bottom: 0;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-width: 0;
+    padding: 6px;
+    background-color: #333;
+    opacity: 0.7;
+    color: #fff;
+}
+.input-grp span:first-of-type{
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+.input-grp span:last-of-type{
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+.search-inp{
+    height: 25px;
+    padding: 2px;
+    outline: none;
+    border-style: none;
+    background-color: #333;
+    opacity: 0.6;
+    color: #fff;
+}
+/* 
+  导航栏部分
+*/
+.nav-wrap{
+    height:28px;
+}
+.navbar-inverse{
+    height:100%;
+    border-width: 0;
+    margin: 0;
+    min-height: 0;
+}
+.navigation-icon,.navigation-button{
+    height: 100%;
+}
+.container-fluid,.nav-cont,.navigation-icon,.navigation-button{
+    padding: 0;
+    margin: 0
+}
+.navigation-button{
+    margin-right: 50%;
+    transform: translateX(50%);
+}
+.nav.navbar-nav{
+    margin: 0;
+    display:flex;
+    width: 100%;
+    height: auto;
+}
+.nav-cont{
+    background-color: #333;
+    
+}
+.nav-cont>.nav>li>a:hover{
+    background-color: rgb(247, 148, 30);
+}
+.nav.navbar-nav>li{
+    flex-grow: 1;
+    height: 100%;
+}
+.dropdown.open,.dropdown-menu{
+    background-color: #080808;
+}
+.dropdown-menu{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    
+}
+.nav.navbar-nav li a{
+    text-align: center;
+    line-height: 28px;
+    padding:0;
+}
+/* 
+  标语轮播图部分
+*/
+.banner-wrap{
+    height: 210px;
+}
+.banner-slide{
+    position: relative;
+}
+.banner-slide,.slide-wrap>ul,.slide-wrap>ul>li>img{
+    /*  */
+    width: 100%;
+    height: 100%;
+}
+.slide-wrap{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.slide-wrap>ul{
+    position: absolute;
+    left: 0;
+    width: 500%;
+    display: flex;
+    flex-grow: 1;
+}
+.slide-wrap>ul>li{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20%;
+    height: 100%;
+}
+.slide-wrap>ul>li:nth-of-type(1){
+    background-image: url('../images/ogMs_banner.jpg');
+}
+.slide-wrap>ul>li:nth-of-type(2){
+    background-image: url('../images/ogMs_banner.jpg');
+}
+.slide-wrap>ul>li:nth-of-type(3){
+    background-image: url('../images/ogMs_banner.jpg');
+}
+.slide-wrap>ul>li:nth-of-type(4){
+    background-image: url('../images/ogMs_banner.jpg');
+}
+.slide-wrap>ul>li:nth-of-type(5){
+    background-image: url('../images/ogMs_banner.jpg');
+}
+.slide-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+.slide-btn>div{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.left-btn{ 
+    float: left;
+    margin-left: -10px;
+}
+.right-btn{
+    float: right;
+    margin-right: -10px;
+}
+.slide-order{
+    position: absolute;
+    bottom: 30px;
+}
+.slide-order,.slide-order>ul{
+    width: 100%;
+    text-align: center;
+}
+.slide-order>ul>li{
+    display: inline-block;
+    border: 1px solid white;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+}
+.slide-order>ul .active{
+    background-color: white;
+}
+.info-wrap{
+    height: 392px;
+}
+.info-inner{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.info-cont{
+    padding: 8px;
+    width: 33%;
+    height: 350px;
+}
+.info-cont h4{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color: #fff;
+}
+.info-cont h5{
+    font-size: 9px;
+    color: #fff;
+    font-weight: 700;
+    margin-top:2px;
+}
+.info-cont p{
+    color: #fff;
+    font-size: 9px;
+    padding: 4px 0;
+}
+.info-cont p a:hover{
+    color: rgb(247, 148, 30);
+}
+.info-first-btn{
+    display: block;
+    width: 110px;
+    height: 20px;
+    background-color: rgb(47, 122, 168);
+    border-style: none;
+    border-width: 0;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 10px;
+    line-height: 20px;
+    text-align: center;
+}
+.info-first-btn:hover{
+    background-color: rgb(247, 148, 30);
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+
+}
+.info-first-btn:active{
+    background-color: rgb(247, 204, 152);
+}
+.info-center{
+    padding: 10px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+.info-center div{
+    border: 2px solid #fff;
+    width: 100%;
+    height: 50%;
+    border-radius: 2px;
+    overflow: hidden
+}
+.info-last h5{
+    height:20px;
+    font-size: 10px;
+    color: rgb(247, 148, 30);
+    line-height: 20px;
+    margin: 2px 0;
+}
+
+/* 
+  媒体查询部分 主要用于兼容移动端
+*/
+@media screen and (max-width:844px){
+    .wrap{
+        width: 80%;
+    }
+}
+@media screen and (max-width:768px){
+    
+    .wrap{
+        min-width: 270px;
+        width: 100%;
+    }
+    .nav.navbar-nav{
+        position: relative;
+        display: block;
+        z-index: 999;
+        background-color: #333;
+    }
+    .nav-cont{
+        height: auto;
+    }
+    .left-btn,.right-btn{
+        margin: 0;
+    }
+    .info-inner{
+        justify-content: space-around;
+    }
+    .info-center{
+        display: none
+    }
+    .info-cont{
+        min-width: 250px;
+    }
+}
+@media screen and (max-width:528px){
+    .search-wrap{
+        display: none;
+    }
+    .mob-divc-search{
+        display: block;
+    }
+    .search-show{
+        display: block;
+    }
+    .left-log{
+        width: 272px;
+        margin-left: 50%;
+        padding: 0;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width:500px){
+    .info-inner{
+        height: 1176px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-center{
+        display: block;
+    }
+    .info-cont{
+        height: 33.333%;
+        width: 63%;
+        min-width: 270px;
+    }
+}
