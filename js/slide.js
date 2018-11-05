@@ -79,10 +79,11 @@ let oSlide = {
     }
 }
 oSlide.init();
-
+//解决页面视口改变时轮播图出现的bug 但是任然存在
 window.onresize = function () {
     oSlide.init();
 }
+//页面顶部移动端 搜索框的弹出和隐藏效果
 $(".btn-toggle").on('click', function () {
     if(this.innerHTML == "取消"){
        $(".mob-divc-search").addClass("search-close");
